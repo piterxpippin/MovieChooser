@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
-    <modules />
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MovieChooser.iml" filepath="$PROJECT_DIR$/MovieChooser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movie-common-1.0-SNAPSHOT/movie-common-1.0-SNAPSHOT.iml" filepath="$PROJECT_DIR$/movie-common-1.0-SNAPSHOT/movie-common-1.0-SNAPSHOT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movie-dao-1.0-SNAPSHOT/movie-dao-1.0-SNAPSHOT.iml" filepath="$PROJECT_DIR$/movie-dao-1.0-SNAPSHOT/movie-dao-1.0-SNAPSHOT.iml" />
+    </modules>
   </component>
 </project>

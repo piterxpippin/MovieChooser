@@ -10,6 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/movie-common-1.0-SNAPSHOT" />
+            <option value="$PROJECT_DIR$/movie-dao-1.0-SNAPSHOT" />
           </set>
         </option>
       </GradleProjectSettings>

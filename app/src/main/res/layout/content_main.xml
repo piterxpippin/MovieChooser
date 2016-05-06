@@ -1,5 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.weeia.moviechooser.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Propozycje do obejrzenia"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="#007CC3"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_1"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_2"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_3"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_1"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_2"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_3"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_1"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_2"/>
+
+            <ImageView
+                android:layout_width="182dp"
+                android:layout_height="268dp"
+                android:src="@mipmap/movie_3"/>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nowości kinowe"
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#007CC3"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_1"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_2"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_3"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_2"/>
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Najlepiej oceniane"
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#007CC3"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_1"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_2"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_3"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_2"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ostatnio obejrzane"
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#007CC3"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_1"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_2"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_3"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="162dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/movie_2"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+</LinearLayout>
+
+
+
+
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!--RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,4 +267,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
-</RelativeLayout>
+</RelativeLayout-->

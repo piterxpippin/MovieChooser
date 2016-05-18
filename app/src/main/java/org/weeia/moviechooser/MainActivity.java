@@ -1,9 +1,11 @@
 package org.weeia.moviechooser;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -17,6 +19,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import moviefinder.domain.Movie;
+import moviefinder.domain.MovieType;
 
 
 public class MainActivity extends AppCompatActivity
@@ -32,16 +41,39 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setLogo(R.mipmap.icon);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        if (fab != null) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+
+// Leaving this part just for an example of SearchResult usage. Feel free to remove soon
+//                    Intent myIntent = new Intent(getBaseContext(), SearchResult.class);
+//                    ArrayList<Movie> listOfMovies = createExemplaryListOfMovies();
+//                    myIntent.putExtra("listOfMovies", listOfMovies);
+//                    startActivity(myIntent);
+//                }
+//
+//                @NonNull
+//                private ArrayList<Movie> createExemplaryListOfMovies() {
+//                    ArrayList<Movie> listOfMovies = new ArrayList<Movie>();
+//
+//                    HashSet<MovieType> movieType = new HashSet<MovieType>();
+//                    movieType.add(MovieType.ADVENTURE);
+//
+//                    HashSet<MovieType> movieType2 = new HashSet<MovieType>();
+//                    movieType2.add(MovieType.ADVENTURE);
+//                    movieType2.add(MovieType.CHILDREN);
+//
+//                    listOfMovies.add(new Movie(1, "Indiana Jones", movieType));
+//                    listOfMovies.add(new Movie(2, "Goonies", movieType2));
+//
+//                    return listOfMovies;
+                }
+            });
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

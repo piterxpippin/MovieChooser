@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.icon);
+        getSupportActionBar().setLogo(R.mipmap.logopasek2);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -112,6 +112,8 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if (id == R.id.action_search){
+            startActivity(new Intent(this, Request.class));
         }
 
         return super.onOptionsItemSelected(item);

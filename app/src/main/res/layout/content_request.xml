@@ -1,15 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="org.weeia.moviechooser.Request"
     tools:showIn="@layout/activity_request">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="search movie by title"
+        android:textSize="16dp"
+        android:padding="5dp"/>
+    <EditText
+        android:id="@+id/editText_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="write title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="movie genre"
+        android:textSize="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radio_comedy"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="comedy"/>
+                <RadioButton
+                    android:id="@+id/radio_drama"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="drama"/>
+                <RadioButton
+                    android:id="@+id/radio_thriller"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="thriller"/>
+                <RadioButton
+                    android:id="@+id/radio_crime"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="crime"/>
+                <RadioButton
+                    android:id="@+id/radio_war"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="war"/>
+                <RadioButton
+                    android:id="@+id/radio_action"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="action"/>
+                <RadioButton
+                    android:id="@+id/radio_adventure"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="adventure"/>
+                <RadioButton
+                    android:id="@+id/radio_romance"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="romance"/>
+                <RadioButton
+                    android:id="@+id/radio_sci_fi"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sci-fi"/>
+                <RadioButton
+                    android:id="@+id/radio_film_noir"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="film-noir"/>
+                <RadioButton
+                    android:id="@+id/radio_imax"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="imax"/>
+                <RadioButton
+                    android:id="@+id/radio_mystery"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="mystery"/>
+                <RadioButton
+                    android:id="@+id/radio_western"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="western"/>
+                <RadioButton
+                    android:id="@+id/radio_fantasy"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="fantasy"/>
+                <RadioButton
+                    android:id="@+id/radio_animation"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="animation"/>
+                <RadioButton
+                    android:id="@+id/radio_children"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="children"/>
+                <RadioButton
+                    android:id="@+id/radio_musical"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="musical"/>
+                <RadioButton
+                    android:id="@+id/radio_horror"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="horror"/>
+                <RadioButton
+                    android:id="@+id/radio_documentary"
+                    android:onClick="onRadioButtonClicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="documentary"/>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="ratings"
+        android:textSize="16dp"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="0.5"
+        android:id="@+id/ratingBar" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/exactRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Exact Rate"/>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Minimal Rate"/>
+    </RadioGroup>
+
+
+</LinearLayout>

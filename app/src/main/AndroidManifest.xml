@@ -31,7 +31,8 @@
         <activity
             android:name=".Request"
             android:label="Request for a movie"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>

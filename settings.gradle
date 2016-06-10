@@ -1,1 +1,1 @@
-include ':app', ':movie-common-1.0-SNAPSHOT', ':movie-dao-1.0-SNAPSHOT'
+include ':app'

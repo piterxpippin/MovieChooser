@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import moviefinder.domain.Movie;
+import moviefinder.domain.MovieType;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Set;
 
-import moviefinder.domain.Movie;
-import moviefinder.domain.MovieType;
+
 
 public class SearchResult extends ListActivity {
 

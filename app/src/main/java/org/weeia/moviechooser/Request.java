@@ -61,7 +61,7 @@ public class Request extends AppCompatActivity {
 
 
         //List<Integer> w= Lists.newArrayList();
-        movieSource = new RestSource("http://192.168.0.100:9200/");
+        movieSource = new RestSource("http://192.168.43.35:9200/");
 
         //List<Movie> moviesWithGivenGenreSortedByNumberOfVotes = movieSource.getMoviesWithGivenGenreSortedByNumberOfVotes(MovieType.DRAMA, 0, 0, 50);
         //movieSource.getMoviesWithGivenGenreAndMinimumNumberOfRatings(MovieType.DRAMA,50,0,50);

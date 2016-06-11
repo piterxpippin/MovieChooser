@@ -2,6 +2,7 @@ package org.weeia.moviechooser;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -31,7 +32,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    @Override
+
+    public static Bitmap proposal_1;
+
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(newBase);
         MultiDex.install(this);
@@ -46,6 +49,10 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.logopasek2);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+        MovieInfo movieInfo = new MovieInfo();
+
+        movieInfo.getImageUrl("1216496");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {

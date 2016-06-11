@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public static Bitmap proposal_1;
+    public static ImageView imageView_1;
 
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(newBase);
@@ -50,9 +51,11 @@ public class MainActivity extends AppCompatActivity
         getSupportActionBar().setLogo(R.mipmap.logopasek2);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+        imageView_1 = (ImageView) findViewById(R.id.proposal_1);
         MovieInfo movieInfo = new MovieInfo();
 
         movieInfo.getImageUrl("1216496");
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (fab != null) {

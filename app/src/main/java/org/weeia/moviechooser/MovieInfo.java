@@ -96,7 +96,7 @@ public class MovieInfo extends AppCompatActivity {
 
                 System.out.println(n);
                 MainActivity.proposal_1 = BitmapFactory.decodeStream((InputStream) new URL(n).getContent());
-                //MainActivity.resp = "resp: " + n;
+                MainActivity.imageView_1.setImageBitmap(MainActivity.proposal_1);
                 return stringBuilder.toString();
             }
             finally{

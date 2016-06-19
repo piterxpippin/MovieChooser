@@ -38,41 +38,49 @@
                 android:src="@mipmap/movie_1"/>
 
             <ImageView
+                android:id="@+id/proposal_2"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_2"/>
 
             <ImageView
+                android:id="@+id/proposal_3"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_3"/>
 
             <ImageView
+                android:id="@+id/proposal_4"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_1"/>
 
             <ImageView
+                android:id="@+id/proposal_5"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_2"/>
 
             <ImageView
+                android:id="@+id/proposal_6"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_3"/>
 
             <ImageView
+                android:id="@+id/proposal_7"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_1"/>
 
             <ImageView
+                android:id="@+id/proposal_8"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_2"/>
 
             <ImageView
+                android:id="@+id/proposal_9"
                 android:layout_width="182dp"
                 android:layout_height="268dp"
                 android:src="@mipmap/movie_3"/>

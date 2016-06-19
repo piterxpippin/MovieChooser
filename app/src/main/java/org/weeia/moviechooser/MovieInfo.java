@@ -3,6 +3,7 @@ package org.weeia.moviechooser;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -57,6 +58,9 @@ public class MovieInfo extends AppCompatActivity {
         new DownloadWebpageTask().execute(stringUrl);
     }
 
+
+
+
     private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
@@ -101,8 +105,9 @@ public class MovieInfo extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            MainActivity.proposal_1 = BitmapFactory.decodeStream((InputStream) new URL(n).getContent());
-                            MainActivity.imageView_1.setImageBitmap(MainActivity.proposal_1);
+                            Bitmap bitmap;
+                            bitmap = BitmapFactory.decodeStream((InputStream) new URL(n).getContent());
+                            //MainActivity.imageView_1.setImageBitmap(bitmap);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

@@ -2,6 +2,7 @@ package org.weeia.moviechooser;
 
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
@@ -92,11 +93,23 @@ public class MovieInfo extends AppCompatActivity {
                 String str = stringBuilder.toString();
 
                 JSONObject obj = new JSONObject(str);
-                String n = obj.getString("Poster");
+                final String n = obj.getString("Poster");
 
                 System.out.println(n);
-                MainActivity.proposal_1 = BitmapFactory.decodeStream((InputStream) new URL(n).getContent());
-                MainActivity.imageView_1.setImageBitmap(MainActivity.proposal_1);
+                Handler handler = new Handler(this.getMainLooper());
+                Runnable r = new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            MainActivity.proposal_1 = BitmapFactory.decodeStream((InputStream) new URL(n).getContent());
+                            MainActivity.imageView_1.setImageBitmap(MainActivity.proposal_1);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                handler.post(r);
+
                 return stringBuilder.toString();
             }
             finally{

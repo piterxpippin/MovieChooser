@@ -61,7 +61,9 @@ public class Request extends AppCompatActivity {
 
 
         //List<Integer> w= Lists.newArrayList();
-        movieSource = new RestSource("http://192.168.43.35:9200/");
+
+        movieSource = new RestSource("http://192.168.0.108:9200/");
+
 
         //List<Movie> moviesWithGivenGenreSortedByNumberOfVotes = movieSource.getMoviesWithGivenGenreSortedByNumberOfVotes(MovieType.DRAMA, 0, 0, 50);
         //movieSource.getMoviesWithGivenGenreAndMinimumNumberOfRatings(MovieType.DRAMA,50,0,50);
@@ -78,10 +80,18 @@ public class Request extends AppCompatActivity {
                         movieList = movieSource.getMoviesWithGivenGenreAndAverageRatingStratingFrom(movieType, ratingbar.getRating(), 0, 50, 20);
                         Snackbar.make(view, "search by exaxt", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+
+                        for( Movie movie : movieList){
+                            System.out.println(movie.getTitle().toString());
+                        }
                     } else {
                         movieList = movieSource.getMoviesWithGivenGenreAndMinimumNumberOfRatings(movieType, Math.round(ratingbar.getRating()), 0, 50);
                         Snackbar.make(view, "search my min", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();
+
+                        for( Movie movie : movieList){
+                            System.out.println(movie.getTitle().toString());
+                        }
                     }
                 } else {
                     System.out.print(title.getText().toString());
@@ -93,9 +103,7 @@ public class Request extends AppCompatActivity {
 
 
                 Intent intent = new Intent(getBaseContext(), SearchResult.class);
-                Bundle extra = new Bundle();
-                extra.putSerializable("listOfMovies", (Serializable) movieList);
-                intent.putExtra(EXTRA_MESSAGE, extra);
+                intent.putExtra("listOfMovies", (Serializable) movieList);
                 startActivity(intent);
             }
         });

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity
                 .execute(createURL("1216496"));
 
         new DownloadImageTask((ImageView) findViewById(R.id.proposal_2))
-                .execute(createURL("1216400"));
+                .execute(createURL("0803096"));
 
         new DownloadImageTask((ImageView) findViewById(R.id.proposal_3))
                 .execute(createURL("2277860"));
@@ -83,13 +83,13 @@ public class MainActivity extends AppCompatActivity
                 .execute(createURL("5278506"));
 
         new DownloadImageTask((ImageView) findViewById(R.id.proposal_7))
-                .execute(createURL("1216415"));
+                .execute(createURL("4738360"));
 
         new DownloadImageTask((ImageView) findViewById(R.id.proposal_8))
-                .execute(createURL("1216416"));
+                .execute(createURL("1780798"));
 
         new DownloadImageTask((ImageView) findViewById(R.id.proposal_9))
-                .execute(createURL("1216457"));
+                .execute(createURL("3065204"));
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

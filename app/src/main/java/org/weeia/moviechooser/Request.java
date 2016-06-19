@@ -77,34 +77,46 @@ public class Request extends AppCompatActivity {
             public void onClick(View view) {
                 if (title.getText().toString().contentEquals("")) {
                     if (exactRate.isChecked()) {
-                        movieList = movieSource.getMoviesWithGivenGenreAndAverageRatingStratingFrom(movieType, ratingbar.getRating(), 0, 50, 20);
-                        Snackbar.make(view, "search by exaxt", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                        for( Movie movie : movieList){
-                            System.out.println(movie.getTitle().toString());
+                        try{
+                            movieList.clear();
+                            movieList = movieSource.getMoviesWithGivenGenreAndAverageRatingStratingFrom(movieType, ratingbar.getRating(), 0, 50, 20);
+                        } catch (Exception e){
+                            Snackbar.make(view, "nic nie znaleziono", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
                         }
                     } else {
-                        movieList = movieSource.getMoviesWithGivenGenreAndMinimumNumberOfRatings(movieType, Math.round(ratingbar.getRating()), 0, 50);
-                        Snackbar.make(view, "search my min", Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
-
-                        for( Movie movie : movieList){
-                            System.out.println(movie.getTitle().toString());
+                        try {
+                            movieList.clear();
+                            movieList = movieSource.getMoviesWithGivenGenreAndMinimumNumberOfRatings(movieType, Math.round(ratingbar.getRating()), 0, 50);
+                        } catch ( Exception e ) {
+                            Snackbar.make(view, "nic nie znaleziono", Snackbar.LENGTH_LONG)
+                                    .setAction("Action", null).show();
                         }
                     }
                 } else {
-                    System.out.print(title.getText().toString());
-                    Movie movieByTitle = movieSource.getMovieByTitle(title.getText().toString());
-                    movieList.add(movieByTitle);
-                    Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
+                    try {
+                        System.out.print(title.getText().toString());
+                        Movie movieByTitle = movieSource.getMovieByTitle(title.getText().toString());
+                        movieList.add(movieByTitle);
+                        Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    } catch ( Exception e ) {
+                        Snackbar.make(view, "nic nie znaleziono", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+
+                }
+
+                if ( movieList.size() < 1 ) {
+                    Snackbar.make(view, "nic nie znaleziono", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                } else {
+                    Intent intent = new Intent(getBaseContext(), SearchResult.class);
+                    intent.putExtra("listOfMovies", (Serializable) movieList);
+                    startActivity(intent);
                 }
 
 
-                Intent intent = new Intent(getBaseContext(), SearchResult.class);
-                intent.putExtra("listOfMovies", (Serializable) movieList);
-                startActivity(intent);
             }
         });
     }

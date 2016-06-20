@@ -96,10 +96,9 @@ public class Request extends AppCompatActivity {
                 } else {
                     try {
                         System.out.print(title.getText().toString());
-                        Movie movieByTitle = movieSource.getMovieByTitle(title.getText().toString());
-                        movieList.add(movieByTitle);
-                        Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
-                                .setAction("Action", null).show();
+                        movieList.addAll(movieSource.getMovieByTitle(title.getText().toString()));
+                        /*Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();*/
                     } catch ( Exception e ) {
                         Snackbar.make(view, "nic nie znaleziono", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();

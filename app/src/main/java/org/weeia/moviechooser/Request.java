@@ -18,7 +18,6 @@ import moviefinder.dao.RestSource;
 import moviefinder.domain.Movie;
 import moviefinder.domain.MovieType;
 
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -96,11 +95,10 @@ public class Request extends AppCompatActivity {
                     }
                 } else {
                     try {
-                        movieList.clear();
-                        movieList = movieSource.getMovieByTitle(title.getText().toString());
-                        //System.out.println(movieByTitle.getMovieId());
-//                        Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
-//                                .setAction("Action", null).show();
+                        System.out.print(title.getText().toString());
+                        movieList.addAll(movieSource.getMovieByTitle(title.getText().toString()));
+                        /*Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();*/
                     } catch ( Exception e ) {
                         Snackbar.make(view, "nic nie znaleziono", Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();

@@ -2,3 +2,5 @@
 .gradle
 /build
 .idea/
+movie-dao-1.0-SNAPSHOT/
+movie-common-1.0-SNAPSHOT/

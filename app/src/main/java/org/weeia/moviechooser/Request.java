@@ -96,6 +96,7 @@ public class Request extends AppCompatActivity {
                 } else {
                     try {
                         System.out.print(title.getText().toString());
+                        movieList.clear();
                         movieList.addAll(movieSource.getMovieByTitle(title.getText().toString()));
                         /*Snackbar.make(view, movieByTitle.getTitle().toString(), Snackbar.LENGTH_LONG)
                                 .setAction("Action", null).show();*/

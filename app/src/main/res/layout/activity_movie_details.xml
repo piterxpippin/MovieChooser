@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="org.weeia.moviechooser.MovieDetailsActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/posterView"
+            android:maxWidth="300px"
+            android:minWidth="300px"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Title"
+            android:id="@+id/titleLabel"
+            android:textStyle="bold"
+            android:layout_alignTop="@+id/posterView"
+            android:layout_toRightOf="@+id/posterView"
+            android:layout_toEndOf="@+id/posterView"
+            android:layout_marginLeft="10px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/titleDescLabel"
+            android:layout_below="@+id/titleLabel"
+            android:layout_alignStart="@+id/titleLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/yearDescLabel"
+            android:layout_below="@+id/yearLabel"
+            android:layout_alignStart="@+id/yearLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Year"
+            android:id="@+id/yearLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/titleDescLabel"
+            android:layout_toEndOf="@+id/posterView"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Released"
+            android:id="@+id/releasedLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/yearDescLabel"
+            android:layout_alignStart="@+id/yearDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/releasedDescLabel"
+            android:layout_below="@+id/releasedLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Runtime"
+            android:id="@+id/runtimeLabel"
+            android:layout_below="@+id/runtimeDescLabel"
+            android:layout_alignStart="@+id/releasedDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/runtimeDescLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/releasedDescLabel"
+            android:layout_alignStart="@+id/runtimeLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Genre"
+            android:id="@+id/genreLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/runtimeLabel"
+            android:layout_alignStart="@+id/runtimeLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/genreDescLabel"
+            android:layout_below="@+id/genreLabel"
+            android:layout_alignStart="@+id/genreLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Director"
+            android:id="@+id/directorLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/genreDescLabel"
+            android:layout_alignStart="@+id/genreDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/directorDescLabel"
+            android:layout_below="@+id/directorLabel"
+            android:layout_alignStart="@+id/directorLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Writer"
+            android:id="@+id/writerLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/directorDescLabel"
+            android:layout_alignStart="@+id/directorDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/writerDescLabel"
+            android:layout_below="@+id/writerLabel"
+            android:layout_alignStart="@+id/writerLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Actors"
+            android:id="@+id/actorsLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/writerDescLabel"
+            android:layout_alignStart="@+id/writerDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/actorsDescLabel"
+            android:layout_below="@+id/actorsLabel"
+            android:layout_alignStart="@+id/actorsLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Plot"
+            android:id="@+id/plotLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/actorsDescLabel"
+            android:layout_alignStart="@+id/actorsDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/plotDescLabel"
+            android:layout_below="@+id/plotLabel"
+            android:layout_alignStart="@+id/plotLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Country"
+            android:id="@+id/countryLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/plotDescLabel"
+            android:layout_alignStart="@+id/plotDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/countryDescLabel"
+            android:layout_below="@+id/countryLabel"
+            android:layout_alignStart="@+id/countryLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="IMDB Rating"
+            android:id="@+id/imdbRatingLabel"
+            android:textStyle="bold"
+            android:layout_below="@+id/countryDescLabel"
+            android:layout_alignStart="@+id/countryDescLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/imdbRatingDescLabel"
+            android:layout_below="@+id/imdbRatingLabel"
+            android:layout_alignStart="@+id/imdbRatingLabel"
+            android:layout_alignLeft="@+id/titleLabel" />
+    </RelativeLayout>
+</ScrollView>

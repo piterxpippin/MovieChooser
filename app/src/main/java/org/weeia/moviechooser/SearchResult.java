@@ -91,7 +91,7 @@ public class SearchResult extends ListActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Movie detailedDescription = listOfMovies.get(position);
 
-                long imdbId = detailedDescription.getImdbId();
+                String imdbId = detailedDescription.getImdbId();
                 JSONObject movieInfo = getJson(createUrl(imdbId));
                 Intent myIntent = new Intent(getBaseContext(), MovieDetailsActivity.class);
                 myIntent.putExtra("movieInfo", movieInfo.toString());
@@ -100,7 +100,7 @@ public class SearchResult extends ListActivity {
         });
     }
 
-    private String createUrl(Long imdbMovieId) {
+    private String createUrl(String imdbMovieId) {
         return "http://www.omdbapi.com/?i=tt" + imdbMovieId + "&plot=short&r=json";
     }
 
